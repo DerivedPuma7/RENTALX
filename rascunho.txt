@@ -1,0 +1,2 @@
+docker-compose up -d                  ---> roda container e deixa em background
+docker logs <nome_do_container> -f    ---> mostra logs do container
