@@ -1,3 +1,4 @@
+---------------------------------------------------- DOCKER ------------------------------------------------------
 docker exec -it CONTAINER_NAME/CONTAINER_ID /bin/bash ---> acessar o shell do container
 
 docker start CONTAINER_NAME/CONTAINER_ID           ---> roda o container
@@ -8,3 +9,9 @@ docker-compose stop                   ---> para o container
 docker-compose down                   ---> para o container e remove o container
 
 docker logs <nome_do_container> -f    ---> mostra logs do container
+
+
+---------------------------------------------------- DB E TypeORM ------------------------------------------------------
+ORM está no meio da model e do banco de dedos, é como se fosse um middlewere entre essas duas entidades
+
+Model <-> ORM <-> DB
