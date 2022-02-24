@@ -1,6 +1,16 @@
 version: "3.7"
 
 services:
+  batabase_ignite:
+    image: postgres
+    container_name: batabase_ignite
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=ignite
+      - POSTGRES_DB=rentx
   app:
     build: .
     container_name: rentalx_node_api
