@@ -9,3 +9,6 @@
 
 //     return createCategoryController;
 // };
+
+//Arquivo não é mais utilizado. Estamos utilizando agora injeção de dependencias
+//Arquivo mantido apenas para conseguir comparar a diferença entre os 2 jeitos de implementar
