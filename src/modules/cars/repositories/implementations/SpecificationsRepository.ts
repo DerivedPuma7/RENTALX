@@ -9,7 +9,7 @@ class SpecificationsRepository implements ISpecificationsRepository {
    private static INSTANCE: SpecificationsRepository;
 
    
-   private constructor() {
+   constructor() {
       this.specifications = [];
    }
    
