@@ -9,7 +9,12 @@ class CreateCategoryController {
       const { name, description } = request.body;
 
       const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
-      await createCategoryUseCase.execute({ name, description });
+
+      try {
+         await createCategoryUseCase.execute({ name, description });
+      } catch (error) {
+         return response.status(400).json({'message': 'Category already exists'});
+      }
 
       return response.status(201).send();
    }
