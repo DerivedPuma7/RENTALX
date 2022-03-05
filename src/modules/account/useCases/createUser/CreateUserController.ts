@@ -14,7 +14,6 @@ class CreateUserController {
         try {
             await createUserUseCase.execute({name, email, password, driver_license});
         } catch (error) {
-            console.log(error);
             return response.status(400).send();
         }
 
