@@ -1,9 +1,9 @@
 import { describe, beforeEach, expect, it } from "@jest/globals";
-import AppError from "../../../errors/AppError";
-import ICreateUserDTO from "../dtos/ICreateUserDTO";
-import UsersResositoryInMemory from "../repositories/in-memory/UsersRepositoryInMemory";
-import AuthenticateUserUseCase from "./authenticateUser/AuthenticateUserUseCase";
-import CreateUserUseCase from "./createUser/CreateUserUseCase";
+import AppError from "@errors/AppError";
+import ICreateUserDTO from "@modules/account/dtos/ICreateUserDTO";
+import UsersResositoryInMemory from "@modules/account/repositories/in-memory/UsersRepositoryInMemory";
+import AuthenticateUserUseCase from "./AuthenticateUserUseCase";
+import CreateUserUseCase from "../createUser/CreateUserUseCase";
 
 let authenticateUserUseCase: AuthenticateUserUseCase;
 let usersResositoryInMemory: UsersResositoryInMemory;
