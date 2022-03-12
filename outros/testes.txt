@@ -1,0 +1,13 @@
+1 - Testes unitários
+    ---> testa pedacinhos do código, cada pequeno recurso
+
+2 - Testes de integração
+    ---> testa o funcionamento do código inteiro
+    -> routes -> controller -> useCase -> repository
+    <- repository <- useCase <- controller <- routes
+
+
+TDD: Test Driven Development
+É uma metodologia de desenvolvimento do software que visa fazer os testes antes do código ser implementado
+
+
