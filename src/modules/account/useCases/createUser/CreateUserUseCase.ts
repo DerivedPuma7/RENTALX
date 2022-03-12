@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 import ICreateUserDTO from "@modules/account/dtos/ICreateUserDTO";
 import IUsersRepository from "@modules/account/repositories/IUsersRepository";
 import { hash } from "bcryptjs";
-import AppError from "@errors/AppError";
+import AppError from "@shared/errors/AppError";
 
 
 @injectable()

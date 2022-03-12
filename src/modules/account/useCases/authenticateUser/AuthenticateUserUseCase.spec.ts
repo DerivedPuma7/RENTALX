@@ -1,5 +1,5 @@
 import { describe, beforeEach, expect, it } from "@jest/globals";
-import AppError from "@errors/AppError";
+import AppError from "@shared/errors/AppError";
 import ICreateUserDTO from "@modules/account/dtos/ICreateUserDTO";
 import UsersResositoryInMemory from "@modules/account/repositories/in-memory/UsersRepositoryInMemory";
 import AuthenticateUserUseCase from "./AuthenticateUserUseCase";
