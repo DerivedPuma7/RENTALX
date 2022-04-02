@@ -23,7 +23,10 @@ describe("Create car", () => {
             category_id: "category_id" 
         };
 
-        await createCarUseCase.execute(car);
+        const createdCar = await createCarUseCase.execute(car);
+
+        expect(createdCar).toHaveProperty("id");
+
     });
 
     it("should not be able to create a car that already exists", () => {
@@ -43,7 +46,7 @@ describe("Create car", () => {
         }).rejects.toBeInstanceOf(AppError);
     });
 
-    it("should not be able to create a car with available status by default", async () => {
+    it("should be able to create a car with available status by default", async () => {
         const car = { 
             name: "name car available", 
             description: "description car", 
