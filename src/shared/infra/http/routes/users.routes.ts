@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { ensureAuthenticated } from "@shared/infra/http/ensureAuthenticate";
+import { ensureAuthenticated } from "@shared/infra/http/middleweres/ensureAuthenticate";
 import multer from 'multer';
 import uploadConfig from '@config/upload';
 

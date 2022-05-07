@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { ensureAuthenticated } from "../ensureAuthenticate";
+import { ensureAuthenticated } from "../middleweres/ensureAuthenticate";
 import multer from 'multer';
 
 import CreateCategoryController from '@modules/cars/useCases/createCategory/createCategoryController';
