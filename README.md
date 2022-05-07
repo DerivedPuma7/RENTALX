@@ -29,9 +29,7 @@
 
 # Cadastro de Especificação do carro
 **RF**  
-[] Deve ser possível cadastrar uma especificação para um carro.    
-[] Deve ser possível listar todas as especificações.   
-[] Deve ser possível listar todos os carros.   
+[] Deve ser possível cadastrar uma especificação para um carro.      
 
 **RN**  
 [] Não deve ser possível cadastrar uma especificação para um carro não cadastrado.     
