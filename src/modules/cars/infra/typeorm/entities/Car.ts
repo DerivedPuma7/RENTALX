@@ -39,7 +39,7 @@ class Car {
     @JoinTable({
         name: "specifications_cars",
         joinColumns: [{name: "car_id"}], //nome da coluna na nossa tabela de relacionamento que referencia essa nossa tabela "Cars"
-        inverseJoinColumns: [{name: "especification_id"}] //nome da coluna na nossa tabela que referencia a nossa tabela que indicamos no ManyToMany
+        inverseJoinColumns: [{name: "specification_id"}] //nome da coluna na nossa tabela que referencia a nossa tabela que indicamos no ManyToMany
     })
     specifications: Specification[];
 
