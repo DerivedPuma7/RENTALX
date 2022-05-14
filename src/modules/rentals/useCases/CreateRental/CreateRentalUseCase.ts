@@ -1,12 +1,9 @@
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-
 import Rental from "@modules/rentals/infra/typeorm/entities/Rental";
 import IRentalsRepository from "@modules/rentals/repositories/IRentalsRepository";
+import IDateProvider from "@shared/container/providers/DateProvider/IDateProvider";
 import AppError from "@shared/errors/AppError";
 import { injectable } from "tsyringe";
 
-dayjs.extend(utc);
 
 interface IRequest {
     car_id: string;
@@ -17,7 +14,8 @@ interface IRequest {
 // @injectable()
 class CreateRentalUseCase {
     constructor(
-        private rentalsRepository: IRentalsRepository
+        private rentalsRepository: IRentalsRepository,
+        private dateProvider: IDateProvider
     ) {}
     
     minimumRentalHours = 24;
@@ -33,10 +31,11 @@ class CreateRentalUseCase {
             throw new AppError("User already have an open rental");
         }
 
-        const expectedReturnDateFormat = dayjs(expected_return_date).utc().local().format();
-        const dateNow = dayjs().utc().local().format();
-
-        const compare = dayjs(expectedReturnDateFormat).diff(dateNow, "hours");
+        const dateNow = this.dateProvider.dateNow();
+        const compare = this.dateProvider.compareInHours(
+            dateNow,
+            expected_return_date
+        );
 
         if(compare < this.minimumRentalHours) {
             throw new AppError("Rental must long at least 24 hours!");
