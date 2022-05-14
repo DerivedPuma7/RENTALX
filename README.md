@@ -38,15 +38,15 @@
 
 # Cadastro de imagens do carro
 **RF**  
-[] Deve ser possível cadastrar a imagem do carro.  
-[] Deve ser possível listar todos os carros.
+[x] Deve ser possível cadastrar a imagem do carro.  
+[x] Deve ser possível listar todos os carros.
 
 **RNF**     
-[] Utilizar o multer para o upload dos arquivos.
+[x] Utilizar o multer para o upload dos arquivos.
 
 **RN**  
-[] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.   
-[] Não deve ser possivel cadastrar uma imagem por um usuário não administrador.    
+[x] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.   
+[x] Não deve ser possivel cadastrar uma imagem por um usuário não administrador.    
 
 # Aluguel do carro
 **RF**  
@@ -56,3 +56,4 @@
 [] O aluguel deve ter duração mínima de 24 horas.  
 [] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.  
 [] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro. 
+[] O usuário deve estar logado na aplicação.
