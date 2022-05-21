@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Users\gusta\.nvm\versions\node\v17.7.1\bin\node.exe C:\Users\gusta\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add dayjs
+  C:\Users\gusta\.nvm\versions\node\v17.7.1\bin\node.exe C:\Users\gusta\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add supertest @types/supertest -D
 
 PATH: 
   C:\Users\gusta\.nvm\versions\node\v17.7.1\bin;C:\Users\gusta\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\gusta\bin;C:\Python310\Scripts;C:\Python310;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\gusta\AppData\Local\Microsoft\WindowsApps;C:\Users\gusta\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gusta\AppData\Roaming\Composer\vendor\bin;C:\Users\gusta\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\gusta\OneDrive\Área de Trabalho\node\Ignite_modulo_2\iniciando_a_api\RENTALX\node_modules\.bin\ts-node-dev'
+  Error: EPERM: operation not permitted, unlink 'C:\node\RENTALX\node_modules\.bin\ts-node-dev'
 
 npm manifest: 
   {
@@ -54,6 +54,7 @@ npm manifest:
     "dependencies": {
       "bcryptjs": "^2.4.3",
       "csv-parse": "^5.0.4",
+      "dayjs": "^1.11.2",
       "express": "^4.17.2",
       "express-async-errors": "^3.1.1",
       "jsonwebtoken": "^8.5.1",
@@ -1488,6 +1489,11 @@ Lockfile:
       abab "^2.0.3"
       whatwg-mimetype "^2.3.0"
       whatwg-url "^8.0.0"
+  
+  dayjs@^1.11.2:
+    version "1.11.2"
+    resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.2.tgz#fa0f5223ef0d6724b3d8327134890cfe3d72fbe5"
+    integrity sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==
   
   debug@2.6.9:
     version "2.6.9"
