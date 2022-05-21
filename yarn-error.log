@@ -814,7 +814,7 @@ Lockfile:
   "@types/strip-bom@^3.0.0":
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/@types/strip-bom/-/strip-bom-3.0.0.tgz#14a8ec3956c2e81edb7520790aecf21c290aebd2"
-    integrity sha1-FKjsOVbC6B7bdSB5CuzyHCkK69I=
+    integrity sha512-xevGOReSYGM7g/kUBZzPqCrR/KYAo+F0yiPc85WFTJa0MSLtyFTVTU6cJu/aV4mid7IffDIWqo69THF2o4JiEQ==
   
   "@types/strip-json-comments@0.0.30":
     version "0.0.30"
@@ -2360,6 +2360,13 @@ Lockfile:
     dependencies:
       has "^1.0.3"
   
+  is-core-module@^2.8.1:
+    version "2.9.0"
+    resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.9.0.tgz#e1c34429cd51c6dd9e09e0799e396e27b19a9c69"
+    integrity sha512-+5FPy5PnwmO3lvfMb0AsoPaBG+5KHUI0wYFXOtYPnVVVspTFUuMZNfNaNVRt3FZadstu2c8x23vykRW/NBoU6A==
+    dependencies:
+      has "^1.0.3"
+  
   is-date-object@^1.0.1:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/is-date-object/-/is-date-object-1.0.5.tgz#0841d5536e724c25597bf6ea62e1bd38298df31f"
@@ -3731,7 +3738,16 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/resolve.exports/-/resolve.exports-1.1.0.tgz#5ce842b94b05146c0e03076985d1d0e7e48c90c9"
     integrity sha512-J1l+Zxxp4XK3LUDZ9m60LRJF/mAe4z6a4xyabPHk7pvK5t35dACV32iIjJDFeWZFfZlO29w6SZ67knR0tHzJtQ==
   
-  resolve@^1.0.0, resolve@^1.20.0:
+  resolve@^1.0.0:
+    version "1.22.0"
+    resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.0.tgz#5e0b8c67c15df57a89bdbabe603a002f21731198"
+    integrity sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==
+    dependencies:
+      is-core-module "^2.8.1"
+      path-parse "^1.0.7"
+      supports-preserve-symlinks-flag "^1.0.0"
+  
+  resolve@^1.20.0:
     version "1.21.0"
     resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.21.0.tgz#b51adc97f3472e6a5cf4444d34bc9d6b9037591f"
     integrity sha512-3wCbTpk5WJlyE4mSOtDLhqQmGFi0/TD9VPwmiolnk8U0wRgMEktqCXd3vy5buTO3tljvalNvKrjHEfrd2WpEKA==
