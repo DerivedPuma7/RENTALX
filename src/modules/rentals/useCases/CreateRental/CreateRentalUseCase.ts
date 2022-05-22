@@ -1,3 +1,4 @@
+import ICarsRepository from "@modules/cars/repositories/ICarsRepository";
 import Rental from "@modules/rentals/infra/typeorm/entities/Rental";
 import IRentalsRepository from "@modules/rentals/repositories/IRentalsRepository";
 import IDateProvider from "@shared/container/providers/DateProvider/IDateProvider";
@@ -17,7 +18,9 @@ class CreateRentalUseCase {
         @inject("RentalsRepository")
         private rentalsRepository: IRentalsRepository,
         @inject("DayJsDateProvider")
-        private dateProvider: IDateProvider
+        private dateProvider: IDateProvider,
+        @inject("CarsRepsitory")
+        private carsRepository: ICarsRepository
     ) {}
     
     minimumRentalHours = 24;
@@ -48,6 +51,9 @@ class CreateRentalUseCase {
             user_id,
             expected_return_date
         });
+
+        const carAvailable = false;
+        await this.carsRepository.updateAvailable(car_id, carAvailable);
 
         return rental;
     }
