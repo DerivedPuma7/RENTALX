@@ -29,21 +29,22 @@ describe("Create car", () => {
 
     });
 
-    it("should not be able to create a car that already exists", () => {
-        expect(async () => {
-            const car = { 
-                name: "name car", 
-                description: "description car", 
-                daily_rate: 100, 
-                license_plate: "ABC-1234", 
-                fine_amount: 60, 
-                brand: "brand car", 
-                category_id: "category_id" 
-            };
-    
-            await createCarUseCase.execute(car);
-            await createCarUseCase.execute(car);
-        }).rejects.toBeInstanceOf(AppError);
+    it("should not be able to create a car that already exists", async () => {
+        const car = { 
+            name: "name car", 
+            description: "description car", 
+            daily_rate: 100, 
+            license_plate: "ABC-1234", 
+            fine_amount: 60, 
+            brand: "brand car", 
+            category_id: "category_id" 
+        };
+
+        await createCarUseCase.execute(car);
+
+        await expect(createCarUseCase
+            .execute(car)
+        ).rejects.toEqual(new AppError("Car already exists!"));
     });
 
     it("should be able to create a car with available status by default", async () => {
