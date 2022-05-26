@@ -7,6 +7,7 @@ interface IDateProvider {
     dateNow(): Date;
     compareInDays(start_date: Date, end_date: Date): number;
     getTimestamp(date: Date): Number;
+    addDays(days: number): Date;
 }
 
 export default IDateProvider;

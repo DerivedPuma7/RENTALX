@@ -31,6 +31,10 @@ class DayJsDateProvider implements IDateProvider {
     getTimestamp(date: Date): number {
         return dayjs(date).unix();
     }
+
+    addDays(days: number): Date {
+        return dayjs().add(days, "days").toDate();
+    }
 }
 
 export default DayJsDateProvider;
