@@ -1,17 +1,17 @@
 import { describe, beforeEach, expect, it } from "@jest/globals";
 import AppError from "@shared/errors/AppError";
 import ICreateUserDTO from "@modules/account/dtos/ICreateUserDTO";
-import UsersResositoryInMemory from "@modules/account/repositories/in-memory/UsersRepositoryInMemory";
+import UsersRepositoryInMemory from "@modules/account/repositories/in-memory/UsersRepositoryInMemory";
 import AuthenticateUserUseCase from "./AuthenticateUserUseCase";
 import CreateUserUseCase from "../createUser/CreateUserUseCase";
 
 let authenticateUserUseCase: AuthenticateUserUseCase;
-let usersResositoryInMemory: UsersResositoryInMemory;
+let usersResositoryInMemory: UsersRepositoryInMemory;
 let createUserUseCase: CreateUserUseCase;
 
 describe("Authenticate User", () => {
     beforeEach(() => {
-        usersResositoryInMemory = new UsersResositoryInMemory();
+        usersResositoryInMemory = new UsersRepositoryInMemory();
         authenticateUserUseCase = new AuthenticateUserUseCase(usersResositoryInMemory);
         createUserUseCase = new CreateUserUseCase(usersResositoryInMemory);
     });

@@ -3,7 +3,7 @@ import User from "@modules/account/infra/typeorm/entities/User";
 import IUsersRepository from "../IUsersRepository";
 
 
-class UsersResositoryInMemory implements IUsersRepository{
+class UsersRepositoryInMemory implements IUsersRepository{
     users: User[] = [];
 
     async create({name, email, password, driver_license}: ICreateUserDTO): Promise<void> {
@@ -24,4 +24,4 @@ class UsersResositoryInMemory implements IUsersRepository{
 
 }
 
-export default UsersResositoryInMemory;
+export default UsersRepositoryInMemory;
