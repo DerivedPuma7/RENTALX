@@ -1,4 +1,5 @@
 import { v4 as uuidV4 } from "uuid";
+import { resolve } from "path";
 import IUsersRepository from "@modules/account/repositories/IUsersRepository";
 import IUsersTokensRepository from "@modules/account/repositories/IUsersTokensRepository";
 import AppError from "@shared/errors/AppError";
@@ -22,6 +23,14 @@ class SendForgotPasswordMailUseCase {
 
     async execute(email: string): Promise<void> {
         const user = await this.usersRepository.findByEmail(email);
+        const templatePath = resolve(
+            __dirname,
+            "..",
+            "..",
+            "views",
+            "emails",
+            "forgotPassword.hbs"
+        );
 
         if(!user) {
             throw new AppError("User does not exists!");
@@ -36,7 +45,12 @@ class SendForgotPasswordMailUseCase {
             expires_date: tokenExpiresDate
         });
 
-        await this.mailProvider.sendMail(email, "Recuperação de senha", `O link para o reset é ${token}`);
+        const variables = {
+            name: user.name,
+            link: `${process.env.FORGOT_MAIL_URL}${token}`
+        };
+
+        await this.mailProvider.sendMail(email, "Recuperação de senha", variables, templatePath);
     }
 }
 
