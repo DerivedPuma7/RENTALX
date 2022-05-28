@@ -35,6 +35,17 @@ class DayJsDateProvider implements IDateProvider {
     addDays(days: number): Date {
         return dayjs().add(days, "days").toDate();
     }
+
+    addHours(hours: number): Date {
+        return dayjs().add(hours, "hours").toDate();
+    }
+
+    compareIfBefore(start_date: Date, end_date: Date): boolean {
+        const startDateTimestamp = this.getTimestamp(start_date);
+        const endDateTimestamp = this.getTimestamp(end_date);
+
+        return startDateTimestamp < endDateTimestamp ? true : false;
+    }
 }
 
 export default DayJsDateProvider;
